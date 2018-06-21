@@ -1,0 +1,23 @@
+html
+  head
+    meta(name="viewport", content="width=device-width,initial-scale=1,maximum-scale=1,minimum-scale=1,user-scalable=no,shrink-to-fit=no")
+    script(src="https://cdn.jsdelivr.net/npm/vue@2.5.16/dist/vue.min.js")
+    link(crossorigin rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css")
+    meta(name="local-auth-cookie-name", content=cookieName)
+    meta(name="local-auth-query-name", content=queryName)
+  body
+    div#app
+      div.alert.alert-light
+      input.form-control(type="number", v-model="passcode")
+      button.btn.btn-primary(v-if="modified" @click="submit")
+        | Submit
+      div.alert.alert-primary(v-if="validating")
+        | Validating
+      div.alert.alert-danger(v-if="wrong")
+        | Invalid passcode
+      div.alert.alert-success(v-if="correct")
+        | Success
+      img.img-thumbnail(v-if="correct", :src="qrUrl")
+    script
+      include index.js
+

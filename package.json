@@ -1,0 +1,13 @@
+{
+  "name": "static-local-auth",
+  "version": "1.0.0",
+  "main": "index.js",
+  "repository": "https://github.com/antiphoton/static-local-auth",
+  "author": "caoboxiao@gmail.com",
+  "license": "GPL",
+  "private": false,
+  "dependencies": {
+    "chalk": "^2.4.1",
+    "cookie": "^0.3.1"
+  }
+}
