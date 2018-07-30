@@ -8,7 +8,7 @@ html
   body
     div#app
       div.alert.alert-light
-      input.form-control(type="number", v-model="passcode")
+      input.form-control(type="text", v-model="passcode")
       button.btn.btn-primary(v-if="modified" @click="submit")
         | Submit
       div.alert.alert-primary(v-if="validating")
